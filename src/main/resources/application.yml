@@ -46,7 +46,7 @@ mybatis-plus:
 
 flowable:
   async-executor-activate: false
-  database-schema-update: true
+  database-schema-update: false
   common:
     app:
       idm-url: http://localhost:8080/flowable-idm

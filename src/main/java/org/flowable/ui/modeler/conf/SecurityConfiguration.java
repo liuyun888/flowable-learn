@@ -41,14 +41,6 @@ public class SecurityConfiguration {
     @Autowired
     protected RemoteIdmAuthenticationProvider authenticationProvider;
 
-//    @Bean
-//    public FlowableCookieFilterRegistrationBean flowableCookieFilterRegistrationBean(RemoteIdmService remoteIdmService, FlowableCommonAppProperties properties) {
-//        FlowableCookieFilterRegistrationBean filter = new FlowableCookieFilterRegistrationBean(remoteIdmService, properties);
-//        filter.addUrlPatterns("/app/*");
-//        filter.setRequiredPrivileges(Collections.singletonList(DefaultPrivileges.ACCESS_MODELER));
-//        return filter;
-//    }
-
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) {
 
@@ -63,9 +55,6 @@ public class SecurityConfiguration {
     @Configuration
     @Order(10)
     public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
-
-//        @Autowired
-//        protected FlowableCookieFilterRegistrationBean flowableCookieFilterRegistrationBean;
 
         @Autowired
         protected AjaxLogoutSuccessHandler ajaxLogoutSuccessHandler;
