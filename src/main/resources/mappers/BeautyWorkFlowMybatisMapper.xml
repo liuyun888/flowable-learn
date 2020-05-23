@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.top.flowable.learn.mappers.BeautyWorkFlowMybatisMapper">
+
+    <!-- SELECT ALL PROCESS DEFINITION ID -->
+    <select id="loadProcessDefinitionIdByKey" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT LAST_ FROM act_id_user WHERE ID_ = #{value}
+    </select>
+
+</mapper>

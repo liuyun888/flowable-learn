@@ -1,18 +1,15 @@
 package com.top.flowable.learn;
 
 
-import org.flowable.ui.modeler.conf.ApplicationConfiguration;
-import org.flowable.ui.modeler.servlet.AppDispatcherServletConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-
-@Import({
-        ApplicationConfiguration.class,
-        AppDispatcherServletConfiguration.class
-})
-@SpringBootApplication
+/**
+ * 排除Spring security的拦截，如果不排除会跳转到登录页面进行登录
+ * exclude = {SecurityAutoConfiguration.class}
+ */
+@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 public class FlowableLearnApplication {
 
     public static void main(String[] args) {
